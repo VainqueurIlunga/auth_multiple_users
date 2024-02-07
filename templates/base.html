@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <center>
+        {% block content %} 
+        
+    {% endblock %}
+   {% if user.is_authenticated %} 
+       <p> vous etes connecter en tant que {{ request.user }}. <a href="{% url 'logout' %}">se deconnecter</a></p>
+   {% endif %}
+   </center>
+
+</body>
+</html>

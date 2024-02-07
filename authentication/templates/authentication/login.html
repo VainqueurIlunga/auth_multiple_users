@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+    {% block content %}
+        <h2> Page de login </h2>
+        <h3>{{ message }}</h3>
+        <form method="post">
+            {{ form.as_p }}
+            {% csrf_token %}
+            <button type="submit"> Se connecte</button>
+        <p>vous n'avais pas de compte ? <a href="{% url 'register' %}"> creer votre compte</a></p>
+        </form>
+    {% endblock %}
